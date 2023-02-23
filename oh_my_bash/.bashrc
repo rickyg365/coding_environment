@@ -3,8 +3,8 @@ export OSH=/data/data/com.termux/files/home/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="my_custom"
-
+# OSH_THEME="my_custom"
+OSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -105,46 +105,50 @@ source $OSH/oh-my-bash.sh
 # Custom Config
 
 # Add paths
-export PATH="$PATH:~/scripts"
+# export PATH="$PATH:~/scripts"
 
 # VNC Display
-export DISPLAY=":1"
+# export DISPLAY=":1"
 
 # Alias
-
 ## > Sourced
-alias nav=". nav.sh"
-alias mnav=". mnav.sh"
-alias fnav=". f_nav.sh"
+# alias nav=". nav.sh"
+# alias mnav=". mnav.sh"
+# alias fnav=". f_nav.sh"
 
-alias init=". init_ssh.sh"
+# alias init=". init_ssh.sh"
 
 ## > Not Sourced
-alias allmightypull="all_pull.sh"
-alias gitgud="gitgud.sh"
+# alias allmightypull="all_pull.sh"
+# alias gitgud="gitgud.sh"
 
-alias linkify="linkify.sh"
-alias scriptify="scriptify.sh"
+# alias linkify="linkify.sh"
+# alias scriptify="scriptify.sh"
 
-alias tmucs="tmucs.sh"
-alias ta="tmux a"
-alias cht="tmux new-session -d -s 'cheet sheet' && tmux send-keys -t 'cheet sheet' cheet_sheet.sh C-m && tmux a"
+# alias tmucs="tmucs.sh"
+# alias cht="tmux new-session -d -s 'cheet sheet' && tmux send-keys -t 'cheet sheet' cheet_sheet.sh C-m && tmux a"
+
+# File Exploring
+alias lr="ranger"
+alias ll="exa -la --sort=extension"
 alias cls="clear && ls"
 alias cll="clear && ll"
-alias lss="exa -la --sort=extension"
-alias lr="ranger"
 
-alias osync="cd storage/Downloads/obsidian/osync"
+# Tmux
+alias ta="tmux a"
 
+# Github
 alias gp="git pull"
 alias ga="git add ."
-# 
+alias gpu="git push"
+alias gs="git status"
 
-clear
+# alias osync="cd storage/Downloads/obsidian/osync"
 
 # Start up
-date
-neofetch
+clear
+# date
+# neofetch
 # curl -s wttr.in/Moon?0
 curl -s wttr.in/San+Francisco?0
 echo ""

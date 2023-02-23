@@ -1,0 +1,28 @@
+# Aliases
+# File Exploring
+alias lr="ranger"
+alias ll="exa -la --sort=extension"
+
+alias cls="clear && ls"
+alias cll="clear && ll"
+
+# Tmux
+alias ta="tmux a"
+
+# Github
+alias gp="git pull"
+alias ga="git add ."
+alias gpu="git push"
+alias gs="git status"
+
+# alias osync="cd storage/Downloads/obsidian/osync"
+
+# Start up
+clear
+# date
+# neofetch
+# curl -s wttr.in/Moon?0
+curl -s wttr.in/San+Francisco?0
+echo ""
+ls
+
