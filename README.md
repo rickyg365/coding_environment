@@ -2,6 +2,12 @@
 
 a repository for sharing some dot files configs and other coding environment setup files
 
+
+## External Deps
+- ranger
+- exa
+- tumx
+
 ## Oh My Bash
 
 ### Theme
