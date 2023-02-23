@@ -3,7 +3,7 @@
 a repository for sharing some dot files configs and other coding environment setup files
 
 
-## External Deps
+## External Dependacies
 - ranger
 - exa
 - tumx
