@@ -1,6 +1,6 @@
 # coding_environment
 
-a repository for sharing some dot files configs and other coding environment setup files
+a repository for dot file configs and other coding environment setup files
 
 
 ## External Dependacies
