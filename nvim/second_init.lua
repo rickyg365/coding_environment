@@ -510,6 +510,6 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
+-- Might need to edit the modeline...
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et conceallevel=2 whichwrap+=<,>,h,l,[,]
