@@ -94,9 +94,6 @@ require('lazy').setup({
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-    sources = {
-        { name = 'orgmode' }
-    }
   },
 
   -- Useful plugin to show you pending keybinds.
@@ -171,32 +168,27 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     config = function()
-        -- Load custom treesitter grammar for org filetype
-        require('orgmode').setup_ts_grammar()
-        -- Treesitter configuration
-        require('nvim-treesitter.configs').setup {
-        -- If TS highlights are not enabled at all, or disabled via `disable` prop,
-        -- highlighting will fallback to default Vim syntax highlighting
-        highlight = {
-            enable = true,
-            -- Required for spellcheck, some LaTex highlights and
-            -- code block highlights that do not have ts grammar
-            additional_vim_regex_highlighting = {'org'},
-        },
-        ensure_installed = {'org'}, -- Or run :TSUpdate org
-        }
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
   {
-    'nvim-orgmode/orgmode', 
-    config = function()      
-        require('orgmode').setup({
-        org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
-        org_default_notes_file = '~/Dropbox/org/refile.org',
-        })
-    end
-    }
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    opts = {
+        load = {
+            ["core.defaults"] = {}, -- Loads default behaviour
+            ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+            ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                config = {
+                    workspaces = {
+                        notes = "~/notes",
+                    },
+                },
+            },
+        },
+    },
+    dependencies = { { "nvim-lua/plenary.nvim" } },
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
