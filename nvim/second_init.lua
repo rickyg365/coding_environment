@@ -183,6 +183,7 @@ require('lazy').setup({
                     workspaces = {
                         notes = "~/notes",
                     },
+                    default_workspace = "notes"
                 },
             },
         },
