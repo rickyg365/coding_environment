@@ -248,6 +248,8 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.o.conceallevel = 2
+
 vim.opt.whichwrap:append({
     ['<'] = true,
     ['>'] = true,
@@ -520,4 +522,4 @@ cmp.setup {
   },
 }
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=4 sts=4 sw=4 et conceallevel=2
+-- vim: ts=4 sts=4 sw=4 et
