@@ -1,0 +1,20 @@
+{
+    "def": {
+        "prefix": "def",
+        "body": [
+            "def ${1: Function Name}(${2: Parameters}):",
+            "\t${3: Body}",
+            "\treturn 0"
+        ],
+        "description": "Python Function Starter"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class ${1: Class Name}:",
+            "\tdef __init__(self, ${2: Parameters}):",
+            "\t\tself.${3: Init Parameters} = ${3}"
+        ],
+        "description": "Python Class Starter"
+    }
+}

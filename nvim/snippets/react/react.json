@@ -1,0 +1,15 @@
+{
+    "rfc": {
+        "prefix": "rfc",
+        "body": [
+            "import {useState} from \"react\"",
+            "const ${1: Component Name} ({${2: Props}) => {",
+            "\treturn (",
+            "\t\t<>${3: Main Content}</>",
+            "\t)",
+            "}",
+            "export default ${1}"
+        ],
+        "description": "React Functional Component"
+    }
+}

@@ -504,5 +504,8 @@ cmp.setup {
   },
 }
 
+require("luasnip.loaders.from_vscode").lazy_load { paths = {"./snippets/python"} }
+require("luasnip.loaders.from_vscode").lazy_load { paths = {"./snippets/react"} }
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

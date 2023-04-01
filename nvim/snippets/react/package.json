@@ -1,0 +1,13 @@
+{
+    "name": "javascriptreact",
+    "version": "1.0.0",
+    "description": "React code snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascriptreact",
+                "path": "./react.json"
+            }
+        ]
+    }
+}
