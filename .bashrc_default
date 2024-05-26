@@ -15,6 +15,12 @@ alias ga="git add ."
 alias gpu="git push"
 alias gs="git status"
 
+function gqs(){
+    git add . &&
+    git commit -m "quick save" &&
+    git push
+}
+
 # alias osync="cd storage/Downloads/obsidian/osync"
 
 # Start up
