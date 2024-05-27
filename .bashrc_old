@@ -117,6 +117,7 @@ export PATH="$PATH:~/scripts"
 # alias fnav=". f_nav.sh"
 
 alias init=". init_ssh.sh"
+alias sync=". sync_dot_files.sh"
 
 ## > Not Sourced
 # alias allmightypull="all_pull.sh"
