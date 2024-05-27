@@ -1,9 +1,9 @@
 #!/bin/bash
 
-HOME="~/.bashrc"
-DOT="~/github/coding_environment/.bahsrc"
-SCRIPTS="~/github/coding_environment/scripts/"
-TDOT="~/github/coding_environment/.bahsrc_old"
+HOME="$HOME/.bashrc"
+DOT="$HOME/github/coding_environment/.bahsrc"
+SCRIPTS="$HOME/github/coding_environment/scripts/"
+TDOT="$HOME/github/coding_environment/.bahsrc_old"
 
 cp -r $TDOT $HOME
 
