@@ -6,6 +6,17 @@ function hehehe {
 function pyshort {
     python $HOME/Documents/POWERSHELL/sample.py
 }
+function servepls {
+    python -m http.server
+}
+
+function gs {
+    git status
+}
+function gup {
+    git pull
+}
+
 function qiksav {
     git status
     git add .
@@ -28,11 +39,19 @@ function addto {
 
 
 function goto {
+    param (
+        [Parameter()]
+        [string]
+        $chosen = ''
+    )
     $current = (Get-Content -Path $HOME/Documents/POWERSHELL/shorts.txt)
-    foreach($p in $current){
-        $p    
+    if (!$chosen) {    
+        foreach($p in $current){
+            $p    
+        }
+        $chosen = Read-Host "Choose path"
     }
-    $chosen = Read-Host "Choose path"
+
     if (Test-Path -Path $HOME) {
         Set-Location -Path "$($current[[int]$chosen])"
     }

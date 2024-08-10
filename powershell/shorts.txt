@@ -1,3 +1,4 @@
-C:\Users\ricky\Documents\github
 C:\Users\ricky\Documents\PowerShell
+C:\Users\ricky\Documents\github
 C:\Users\ricky\Documents\obsidian\osync
+C:\Users\ricky\Desktop\map
