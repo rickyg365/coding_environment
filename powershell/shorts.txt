@@ -2,3 +2,5 @@ C:\Users\ricky\Documents\PowerShell
 C:\Users\ricky\Documents\github
 C:\Users\ricky\Documents\obsidian\osync
 C:\Users\ricky\Desktop\map
+C:\Users\ricky\Desktop\map\go
+C:\Users\ricky\Documents\PowerShell\game
