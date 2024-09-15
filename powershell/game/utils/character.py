@@ -1,4 +1,4 @@
-
+from typing import Self, List, Dict
 from dataclasses import dataclass
 from utils.status_bar import status_bar
 
@@ -48,10 +48,14 @@ Character
 
 @dataclass
 class Character:
+    cid: str 
     name: str
     level: int
-    hp: int = 10 
-    mp: int = 0 
+    max_health: int = 10 
+    current_health: int = 0 
+    max_mp: int = 0 
+    current_mp: int = 0
+
     attack: int = 0 
     defense: int = 0 
     special_attack: int = 0 
@@ -60,25 +64,32 @@ class Character:
     luck: int = 0 
     is_alive: bool = True
     experience: int = 0
+    attacks: Dict = None
 
     # Meta
     textbox_width: int = 0
     textbox_height: int = 0
 
     def __post_init__(self):
-        self.current_hp = self.hp 
-        self.currnet_mp = self.mp
+        self.current_health = self.max_health if self.current_health == 0 else self.current_health 
+        self.current_mp = self.max_mp if self.current_mp == 0 else self.current_mp
+
+        if self.attacks is None:
+            # self.attacks = dict()
+            self.attacks = {
+                "hit": (10, self.attack, None)
+            }
 
     def __str__(self):
         custom_config = {
-            "l": "[",
+            "l": "[",   
             "r": "]",
             "fill": "=",
             "space": " ",
         }
         
         row1 = f'lvl.{self.level:2}  {self.name}'
-        row2 = f"HP {status_bar(self.current_hp, self.hp, config=custom_config)}"
+        row2 = f"HP {status_bar(self.current_health, self.max_health, config=custom_config)}"
         s = f'{row1:<{len(row2)}}\n{row2}'
         return s
     
@@ -91,13 +102,38 @@ class Character:
             self.experience += value
             # Add accum exp
             self.accumulated_experience += types
+    
+    def take_hit(self, damage_amount, enemy_atk, status_conditions):
+        ad_dif = enemy_atk - self.defense
+        full_damage_amt = damage_amount + ad_dif
+        self.current_health -= full_damage_amt
 
+        # Check status
+        if self.current_health <= 0:
+            self.is_alive = False
+            self.current_health = 0
+        
+        # Handle status conditions
+        if status_conditions is not None:
+            pass
+        
+        return full_damage_amt
+    
+    def get_attack(self, atk_name: str="hit"):
+        return self.attacks.get(atk_name, (0, self.attack, None))
+    
+    def show_attacks(self):
+        # "hit": (10, self.attack, None)
+        for atk_name, atk_data in self.attacks.items():
+            ...
+        return self.attacks
     
     def export(self):
         return {
+            "cid": self.cid,
             "name": self.name,
-            "hp": self.hp,
-            "mp": self.mp,
+            "hp": self.max_health,
+            "mp": self.max_mp,
             "attack": self.attack,
             "defense": self.defense,
             "special_attack": self.special_attack,
@@ -105,7 +141,7 @@ class Character:
             "speed": self.speed,
             "luck": self.luck,
             "is_alive": self.is_alive,
-            "current_hp": self.current_hp,
+            "current_hp": self.current_health,
             "currnet_mp": self.currnet_mp,
             "experience": self.experience,
             # "accumulated_experience": self.accumulated_experience,

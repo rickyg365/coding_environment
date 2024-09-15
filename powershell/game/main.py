@@ -1,4 +1,5 @@
 import os
+import json
 
 from utils.screen import Screen
 from utils.object import Object
@@ -38,6 +39,17 @@ from utils.text_block import TextBlock
 """
 
 
+def save_json(data, filename: str="default_save.json"):
+    with open(filename, 'w') as save_buf:
+        json.dump(data, save_buf, indent=4)
+    return True
+
+def load_json(filename: str="default_save.json"):
+    data = None
+    with open(filename, 'r') as load_buf:
+        data = json.load(load_buf)
+    return data
+
 
 class Game:
     def __init__(self, width: int=0, height: int=0):
@@ -46,7 +58,6 @@ class Game:
 
         self.screen = Screen(width=width, height=height, debug=False)
 
-    
     def __str__(self):
         s = f'{self.width}'
         return s
@@ -88,3 +99,85 @@ if __name__ == "__main__":
     # print(main_screen)
 
     Game(width=SCREEN_WIDTH, height=SCREEN_HEIGHT).run()
+
+
+
+    sample_character_data = {
+        "id": "00",
+        "name": "Blank",
+        "level": 0,
+        "current_health": 1,
+        "max_health": 1,
+        "current_mp": 1,
+        "max_mp": 1,
+        "attack": 1,
+        "defense": 1,
+        "special_attack": 1,
+        "special_defense": 1,
+        "speed": 1,
+        "luck": 1,
+    }
+    data = save_json(sample_character_data, "test_character_data.json")
+
+    sample_enemy_character_data = [
+        {
+            "id": "00",
+            "name": "Blank",
+            "level": 0,
+            "current_health": 1,
+            "max_health": 1,
+            "current_mp": 1,
+            "max_mp": 1,
+            "attack": 1,
+            "defense": 1,
+            "special_attack": 1,
+            "special_defense": 1,
+            "speed": 1,
+            "luck": 1,
+        },
+        {
+            "id": "00",
+            "name": "Blank",
+            "level": 0,
+            "current_health": 1,
+            "max_health": 1,
+            "current_mp": 1,
+            "max_mp": 1,
+            "attack": 1,
+            "defense": 1,
+            "special_attack": 1,
+            "special_defense": 1,
+            "speed": 1,
+            "luck": 1,
+        },
+        {
+            "id": "00",
+            "name": "Blank",
+            "level": 0,
+            "current_health": 1,
+            "max_health": 1,
+            "current_mp": 1,
+            "max_mp": 1,
+            "attack": 1,
+            "defense": 1,
+            "special_attack": 1,
+            "special_defense": 1,
+            "speed": 1,
+            "luck": 1,
+        },
+        {
+            "id": "00",
+            "name": "Blank",
+            "level": 0,
+            "current_health": 1,
+            "max_health": 1,
+            "current_mp": 1,
+            "max_mp": 1,
+            "attack": 1,
+            "defense": 1,
+            "special_attack": 1,
+            "special_defense": 1,
+            "speed": 1,
+            "luck": 1,
+        }
+    ]

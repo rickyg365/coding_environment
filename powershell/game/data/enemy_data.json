@@ -1,0 +1,62 @@
+[
+    {
+        "cid": "02",
+        "name": "Goblin",
+        "level": 1,
+        "current_health": 20,
+        "max_health": 20,
+        "current_mp": 10,
+        "max_mp": 10,
+        "attack": 8,
+        "defense": 5,
+        "special_attack": 2,
+        "special_defense": 2,
+        "speed": 5,
+        "luck": 2
+    },
+    {
+        "cid": "03",
+        "name": "Skeleton",
+        "level": 1,
+        "current_health": 15,
+        "max_health": 15,
+        "current_mp": 10,
+        "max_mp": 10,
+        "attack": 10,
+        "defense": 3,
+        "special_attack": 8,
+        "special_defense": 1,
+        "speed": 5,
+        "luck": 1
+    },
+    {
+        "cid": "04",
+        "name": "Zombie",
+        "level": 1,
+        "current_health": 25,
+        "max_health": 25,
+        "current_mp": 8,
+        "max_mp": 8,
+        "attack": 6,
+        "defense": 7,
+        "special_attack": 4,
+        "special_defense": 3,
+        "speed": 3,
+        "luck": 1
+    },
+    {
+        "cid": "05",
+        "name": "Living Armor",
+        "level": 1,
+        "current_health": 35,
+        "max_health": 35,
+        "current_mp": 10,
+        "max_mp": 10,
+        "attack": 9,
+        "defense": 7,
+        "special_attack": 7,
+        "special_defense": 6,
+        "speed": 3,
+        "luck": 2
+    }
+]

@@ -1,11 +1,11 @@
 from utils.text_block import TextBlock
 
 class Screen:
-    def __init__(self, width: int=40, height: int=20, debug: bool=True):
+    def __init__(self, width: int=40, height: int=20, debug: bool=False):
         self.width = width
         self.height = height
 
-        self.data = self.build_data("█")
+        self.data = self.build_data(" ")  # █
         self.border = True
 
         if debug:
@@ -22,6 +22,9 @@ class Screen:
     def build_data(self, starting_value: str=" "):
         return [[starting_value for i in range(self.width)] for j in range(self.height)]
     
+    def reset_screen(self):
+        self.data = self.build_data(" ")
+
     def replace(self, x, y, data):
         self.data[y][x] = data
 
