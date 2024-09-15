@@ -5,5 +5,11 @@
   "map": "C:\\Users\\ricky\\Desktop\\map",
   "go": "C:\\Users\\ricky\\Desktop\\map\\go",
   "game": "C:\\Users\\ricky\\Documents\\PowerShell\\game",
-  "temp": "C:\\Users\\ricky\\Desktop\\map\\Templates"
+  "temp": "C:\\Users\\ricky\\Desktop\\map\\Templates",
+  "py": "C:\\Users\\ricky\\Documents\\github\\python",
+  "auto": "C:\\Users\\ricky\\Documents\\github\\python\\pyautogui",
+  "play": "C:\\Users\\ricky\\Desktop\\map\\playground",
+  "act": "C:\\Users\\ricky\\Documents\\github\\active_projects",
+  "nvi": "C:\\Users\\ricky\\AppData\\Local\\nvim",
+  "cert": "C:\\Users\\ricky\\Desktop\\map\\comp_cert"
 }

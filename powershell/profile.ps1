@@ -4,7 +4,11 @@ function hehehe {
 }
 
 function pyshort {
-    python $HOME/Documents/POWERSHELL/sample.py
+    param (
+        [Parameter()]
+        [string] $arg = ''
+    )
+    python $HOME/Documents/POWERSHELL/sample.py $arg
 }
 function pygam {
     python $HOME/Documents/POWERSHELL/game/main.py
@@ -100,8 +104,8 @@ function addnav {
     
     $current_json = (Get-Content -Raw $HOME/Documents/POWERSHELL/test.json) | ConvertFrom-Json -AsHashtable
 
-    Write-Host "$($current_json)"
-    Write-Host "$($chosen)"
+    # Write-Host "$($current_json)"
+    # Write-Host "$($chosen)"
     
     if (!$chosen) {
         $chosen = Read-Host "Choose key"
@@ -111,4 +115,48 @@ function addnav {
     $current_json | ConvertTo-Json -Depth 4 | Out-File $HOME/Documents/POWERSHELL/test.json
 }
 
+function ytd {
+    param (
+        [Parameter()]
+        [string]
+        $url = ''
+    )
 
+    yt-dlp -f mp4 $url
+}
+
+function yta {
+    param (
+        [Parameter()]
+        [string]
+        $url = ''
+    )
+
+    yt-dlp -f m4a $url
+}
+
+function ytmp3 {
+    param (
+        [Parameter()]
+        [string]
+        $url = ''
+    )
+
+    yt-dlp -f "ba" $url
+}
+
+
+function yt_info {
+    param (
+        [Parameter()]
+        [string] $url = '',
+        [Parameter()]
+        [string] $filename = 'extracted_info.md'
+    )
+
+    if (!$url) {
+        return
+    }
+    
+    yt-dlp --flat-playlist --print "%(id)s^%(title)s" "$($url)" > $filename
+}

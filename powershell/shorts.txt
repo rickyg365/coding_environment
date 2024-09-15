@@ -4,3 +4,4 @@ C:\Users\ricky\Documents\obsidian\osync
 C:\Users\ricky\Desktop\map
 C:\Users\ricky\Desktop\map\go
 C:\Users\ricky\Documents\PowerShell\game
+C:\Users\ricky\Documents\github\active_projects\game_console
