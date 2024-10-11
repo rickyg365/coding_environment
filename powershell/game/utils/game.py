@@ -240,7 +240,7 @@ class Game:
                     # Choose Random Enemy
                     enemy_idx = random.randint(0, len(self.enemy_data) - 1)
                     # Inform player of their fate
-                    input(f"Prepare to battle... {self.enemy_data[enemy_idx].get("name", "???")}")
+                    input(f"Prepare to battle... {self.enemy_data[enemy_idx].get('name', '???')}")
 
                     enemy = Character(**self.enemy_data[enemy_idx])
                     player_win = self.battle(enemy)
