@@ -1,0 +1,26 @@
+{
+    "hero": {
+        "cid": "00",
+        "level": 8,
+        "name": "rg",
+        "max_hp": 70,
+        "max_mp": 70,
+        "attack": 32,
+        "defense": 21,
+        "special_attack": 36,
+        "special_defense": 36,
+        "speed": 37,
+        "luck": 7,
+        "is_alive": true,
+        "current_hp": 70,
+        "current_mp": 70,
+        "experience": 10,
+        "hp_growth": 5,
+        "mp_growth": 10,
+        "atk_growth": 3,
+        "def_growth": 3,
+        "satk_growth": 6,
+        "sdef_growth": 5,
+        "spd_growth": 5
+    }
+}
