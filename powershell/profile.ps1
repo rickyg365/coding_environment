@@ -28,7 +28,6 @@ function qiksav {
     git status
     git add .
     git commit -m "Quicksave"
-    git push
 }
 
 function short {
@@ -159,4 +158,31 @@ function yt_info {
     }
     
     yt-dlp --flat-playlist --print "%(id)s^%(title)s" "$($url)" > $filename
+}
+
+
+function create_electron_app {
+    param (
+        [Parameter()]
+        [string] $project_name = 'my_electron_app',
+        [Parameter()]
+        [string] $template_choice = 'default'
+    )
+    $new_dir = "$(Get-Location)/$($project_name)"
+    
+    mkdir $new_dir
+    Set-Location $new_dir
+    
+    # Add template files
+    Copy-Item -Path "$($HOME)/Documents/Powershell/electron_templates/$($template_choice)" -Destination "$($new_dir)/src" -Recurse
+    
+    
+    # Install Imports
+    npm init
+    npm install electron @electron-forge/cli --save-dev
+    npx electron-forge import
+
+    # Warning when making with electron forge
+    $Env:NODE_OPTIONS = "--disable-warning=DEP0174"
+
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="renderer.js" defer></script>
+    <script src="controls.js" defer></script>
+    <title>Electron App</title>
+</head>
+<body>
+    <!-- Title Bar -->
+    <div id="title-bar" class="drag">
+        <div id="title" class="logo">Title</div>
+        <div class="title-controls clickable flex-ctr">
+            <button id="minimize-btn" class="title-btn">-</button>
+            <button id="fullscreen-btn" class="title-btn">&#9744;</button>
+            <button id="close-btn" class="title-btn">X</button>
+        </div>
+    </div>
+    
+    <!-- Main App -->
+    <main>        
+        <h1>Main App</h1>
+
+        <!-- Display -->
+        <div class="main-display"></div>
+
+        <hr>
+
+        <!-- Change Title -->
+        Title: <input id="title-input">
+        <button id="btn" type="button">Set</button>
+        
+        <!-- Open file -->
+        <button type="button" id="file-btn">Open a File</button>
+        file: <strong id="filePath"></strong>
+        
+        <hr>
+        <div id="info">No Data</div>
+    </main>
+    <footer class="flex-ctr">RG &copy; 2025</footer>
+</body>
+</html>

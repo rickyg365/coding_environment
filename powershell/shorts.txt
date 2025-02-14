@@ -5,3 +5,17 @@ C:\Users\ricky\Desktop\map
 C:\Users\ricky\Desktop\map\go
 C:\Users\ricky\Documents\PowerShell\game
 C:\Users\ricky\Documents\github\active_projects\game_console
+C:\Users\ricky\Documents\github\python\cli\budge_track
+C:\Users\ricky\Documents\github\python\cli\rpg
+C:\Users\ricky\Documents\github\python\weather
+C:\Users\ricky\Documents\github\active_projects\new_web
+C:\Users\ricky\Documents\github\active_projects\new_web\game
+C:\Users\ricky\Documents\github\python\poke_api\poke_game
+C:\Users\ricky\Documents\github\python\cli\inventory
+C:\Users\ricky\Documents\github\python\cli\snippets
+C:\Users\ricky\Documents\github\active_projects\electron
+C:\Users\ricky\Documents\github\active_projects\electron\first_app
+C:\Users\ricky\Documents\github\active_projects\electron
+C:\Users\ricky\Documents\github\active_projects\electron\new_app_template
+C:\Users\ricky\Documents\github\active_projects\base
+C:\Users\ricky\Documents\github\python\base
