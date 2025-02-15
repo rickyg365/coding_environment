@@ -14,9 +14,9 @@
     <div id="title-bar" class="drag">
         <div id="title" class="logo">Title</div>
         <div class="title-controls clickable flex-ctr">
-            <button id="minimize-btn" class="title-btn">-</button>
+            <button id="minimize-btn" class="title-btn">&#9866;</button>
             <button id="fullscreen-btn" class="title-btn">&#9744;</button>
-            <button id="close-btn" class="title-btn">X</button>
+            <button id="close-btn" class="title-btn">&#10006;</button>
         </div>
     </div>
     
@@ -25,18 +25,23 @@
         <h1>Main App</h1>
 
         <!-- Display -->
-        <div class="main-display"></div>
+        <div class="main-display">.</div>
 
         <hr>
 
         <!-- Change Title -->
-        Title: <input id="title-input">
-        <button id="btn" type="button">Set</button>
+        <div class="row">
+            Title: <input id="title-input">
+            <button id="btn" type="button">Set</button>
+        </div>
         
         <!-- Open file -->
-        <button type="button" id="file-btn">Open a File</button>
-        file: <strong id="filePath"></strong>
-        
+        <div class="row">
+            <button type="button" id="file-btn">Open a File</button>
+            file: <strong id="filePath"></strong>
+        </div>
+
+
         <hr>
         <div id="info">No Data</div>
     </main>
