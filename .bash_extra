@@ -1,0 +1,39 @@
+
+
+# Alias
+alias ls="eza -l"
+
+alias ll="eza -la"
+alias lr="ranger"
+
+alias cls="clear && ls"
+
+alias rss="newsboat"
+
+alias pyrss="python ~/python/utils/yt_rss.py"
+
+alias ytd="yt-dlp --no-warnings"
+
+alias edit="nvim ~/.bashrc"
+alias qe="nvim ."
+
+
+alias ytdir="cd ~/storage/downloads/yt"
+
+alias ginit=". ~/docs/scripts/init_ssh.sh"
+
+# Functions
+yrss() { wget -q -O - "$1" | grep -oP '(?<=channelId":").{0,24}' | tail -1 > test.txt ;}
+
+
+# Startup Display
+clear
+
+timeout 2 curl wttr.in/San+Francisco?format=3
+neofetch
+ls
+
+
+
+
+

@@ -1,0 +1,20 @@
+browser "termux-open-url %u"
+
+color info black white bold
+
+color listfocus black yellow
+color listfocus_unread black yellow bold
+
+color listnormal_unread yellow default bold
+color listnormal default default
+
+color article yellow default
+
+macro v set browser "setsid -f mpv" ; open-in-browser ; set browse
+
+macro p set browser "mpv --ontop --no-border --force-window --autofit=500x280 --geometry=-15-10 %u"; open-in-browser ; set browser "$BROWSER %u"
+
+
+macro y set browser "yt-dlp %u" ; open-in-browser ; set browser "$BROWSER %u"
+
+

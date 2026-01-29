@@ -1,0 +1,42 @@
+
+«---Reddit--->>
+https://www.reddit.com/r/pokemon/.rss fun
+https://www.reddit.com/r/entertainment.rss fun
+
+https://www.reddit.com/r/news.rss news
+https://www.reddit.com/r/worldnews.rss news
+
+https://www.reddit.com/r/tech.rss news
+https://www.reddit.com/r/technology.rss news
+https://www.reddit.com/r/dataisbeautiful.rss "Golden Hour"
+https://www.reddit.com/r/programminghorror.rss Programming
+https://www.reddit.com/r/neovim.rss Programming "dev env"
+
+<<---Podcasts--->>
+https://residentevilpodcast.com/rss Favorite fun
+
+
+<<---Youtube--->>
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEbYhDd6c6vngsF5PQpFVWg Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJZv4d5rbIKd4QHMPkcABCw Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd3dNckv1Za2coSaHGHl5aA Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvPX16dsLkRAzvGZKFiOl2Q Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGiRSHBdWuCgjgmPPz_13xw Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_iD0xppBwwsrM9DegC5cQQ Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA Programming Favorite "Golden Hour"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwHwDuNd9lCdA7chyyquDXw Programming "Golden Hour" Favorite
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA Science Technology "Golden Hour" Favorite
+
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTpmmkp1E4nmZqWPS-dl5bg EDU Programming Technology "Golden Hour" Favorite
+
+
+
+# Youtube Base XML Url
+# https://www.youtube.com/feeds/videos.xml?channel_id=
+
+# Tags
+# Math Science Programming Technology Media Entertainment Politics EDU
+# "Golden Hour" Favorite
+
