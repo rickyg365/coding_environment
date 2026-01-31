@@ -1,10 +1,28 @@
-# Aliases
+# Alias
+
 # File Exploring
-alias lr="ranger"
-alias ll="exa -la --sort=extension"
+alias ls="eza"
+alias ll="eza -la --sort=extension"
 
 alias cls="clear && ls"
 alias cll="clear && ll"
+
+alias lr="ranger"
+
+# Shortcuts
+alias rss="newsboat"
+
+alias qe="nvim ."
+alias edit="nvim ~/.bashrc"
+
+# Nav
+alias ytdir="cd ~/storage/downloads/yt"
+
+# Obsidian
+# alias osync="cd ~/storage/downloads/obsidian/osync"
+
+# Python
+alias serve="python -m http.server"
 
 # Tmux
 alias ta="tmux a"
@@ -15,77 +33,52 @@ alias ga="git add ."
 alias gpu="git push"
 alias gs="git status"
 
-function gsav(){
+function gq(){
     git add . &&
     git commit -m "quick save" &&
     git push
 }
 
-# Obsidian
-# alias osync="cd storage/Downloads/obsidian/osync"
+alias ginit=". ~/docs/scripts/init_ssh.sh"
 
-# Python
-alias serve="python -m http.server"
+# Play in Terminal, using mpv
+alias pit="mpv --vo=tct --vo-tct-256=yes --vo-tct-algo=half-blocks --profile=sw-fast --really-quiet"
+
+# Functions
 
 # yt-dlp
 ytd() {
-    yt-dlp -f mp4 "$1"
+    yt-dlp -t mp4 --no-warnings "$1"
 }
 
 yta() {
-    yt-dlp -f m4a "$1"
+    yt-dlp -t m4a --no-warnings "$1"
+}
+
+anime() {
+    ani-cli 
 }
 
 
 
-# Start up
+# yrss() {
+#     wget -q -O - "$1" | grep -o -P (?<= channelId":").{0,24} | tail -1
+# }
+
+yrss() { wget -q -O - "$1" | grep -oP '(?<=channelId":").{0,24}' | tail -1 ;}
+cliprss() { wget -q -O - "$1" | grep -oP '(?<=channelId":").{0,24}' | tail -1 | termux-clipboard-set ;}
+
+# timg | p: q-quarter h-half_blocks
+# timg -pq filename.png
+# timg -V -pq filename.mp4
+
+# Exports
+# export TIMG_ALLOW_FRAME_SKIP=1
+
+# Display Start up
 clear
-# date
-# neofetch
 
-# Weather wttr api, curl wttr.in/:help  for detailed info
-# Sample Params
-#   ?T            forces plain text
-#   .png          png format
-#   ?format=3     One line output
-# Formats
-#   1:  Weather at location
-#   2:  Detailed weather at location
-#   3:  Name of location + Weather at location
-#   4:  Name of location + Detailed weather at location
-# Multi Query
-#   curl -s 'wttr.in/{Nuremberg,Hamburg,Berlin}?format=3'
-# Custom, use %-notation
-#   c       Weather condition
-#   C       Weather condition textual name
-#   x       Weather condition, plain-text symbol
-#   h       Humidity
-#   t       Temperature (Actual)
-#   f       Temperature (Feels Like)
-#   w       Wind
-#   l       Location
-#   m       Moon Phase
-#   M       Moon Day
-#   P       Precipitation(mm/3 hours)
-#   p       Pressure (hPa)
-#   u       UV index (1-12)
-#
-#   D       Dawn*
-#   S       Sunrise*
-#   z       Zenith*
-#   s       Sunset*
-#   d       Dusk*
-#   T       Current time*
-#   Z       Local timezone
-# [ *shown in local timezone ]
-# Example(format=3): ?format="%l:+%c+%t\n"
-# JSON: ?format=j1
-
-# curl -s wttr.in/Moon?0
-# curl -s wttr.in/San+Francisco?0
-
-curl -s wttr.in/San+Francisco?format="%l:+%c+%t/%f %m\n"
-
-echo ""  # Spacing
+timeout 1 curl wttr.in/San+Francisco?format=3
+neofetch
 ls
 

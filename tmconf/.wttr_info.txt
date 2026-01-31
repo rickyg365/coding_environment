@@ -1,0 +1,43 @@
+Weather wttr api, curl wttr.in/:help  for detailed info
+
+Sample Params
+    ?T            forces plain text
+    .png          png format
+    ?format=3     One line output
+Formats
+    1:  Weather at location
+    2:  Detailed weather at location
+    3:  Name of location + Weather at location
+    4:  Name of location + Detailed weather at location
+Multi Query
+    curl -s 'wttr.in/{Nuremberg,Hamburg,Berlin}?format=3'
+Custom, use %-notation
+    c   Weather condition
+    C   Weather condition textual name
+    x   Weather condition, plain-text symbol
+    h   Humidity
+    t   Temperature (Actual)
+    f   Temperature (Feels Like)
+    w   Wind
+    l   Location
+    m   Moon Phase
+    M   Moon Day
+    P   Precipitation(mm/3 hours)
+    p   Pressure (hPa)
+    u   UV index (1-12)
+    D   Dawn*
+    S   Sunrise*
+    z   Zenith*
+    s   Sunset*
+    d   Dusk*
+    T   Current time*
+    Z   Local timezone
+[ *shown in local timezone ]
+
+(format=3)  =>   ?format="%l:+%c+%t\n"
+(JSON)      =>   ?format=j1
+
+Example:
+    curl -s wttr.in/Moon?0
+    curl -s wttr.in/San+Francisco?0
+    curl -s wttr.in/San+Francisco?format="%l:+%c+%t/%f %m\n"

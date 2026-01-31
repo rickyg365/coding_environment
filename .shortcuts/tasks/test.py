@@ -5,6 +5,14 @@ import threading
 
 import termuxgui as tg
 
+"""
+Idea
+Data entry
+    Create schema
+    C:      input data
+    RUD:    Display Data for Edit/Delete
+    Function?: perform analysis, send to server, download
+"""
 
 with tg.Connection() as c:
     a = tg.Activity(c)
