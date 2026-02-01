@@ -39,8 +39,9 @@ Continued down here...
     count = 0
     def handle():
         global count
+        btn_click = lambda event, btn: event.type == tg.Event.click and event.value["id"] == btn
         for ev in c.events():
-            if ev.type == tg.Event.click and ev.value["id"] == button:
+            if btn_click(ev, button):
                 count += 1
 
     # Setup Threads
