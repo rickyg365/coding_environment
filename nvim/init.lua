@@ -9,11 +9,7 @@ what your configuration is doing.
 Once you've done that, you should start exploring, configuring and tinkering to
 explore Neovim!
 
-If you don't know anything about Lua, I recommend taking some time to read through
-a guide. One possible example:
-- https://learnxinyminutes.com/docs/lua/
-
-And then you can explore or search through `:help lua-guide`
+You can explore or search through `:help lua-guide`
 --]]
 
 -- Set <space> as the leader key [:help mapleader]
@@ -72,22 +68,13 @@ vim.opt.whichwrap:append({
 
 -- [[ Basic Keymaps ]]
 
--- Keymaps for better default experience [:help vim.keymap.set()]
+-- Keymaps disabled for better default experience, 
+-- set({modes}, 'keymap', 'function', {opts})  [:help vim.keymap.set()]
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- [[ Highlight on yank ]] [:help vim.highlight.on_yank()]
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
 
 
 -- Diagnostic keymaps
